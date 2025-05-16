@@ -38,7 +38,7 @@ pipeline {
 
     post {
         success {
-            archiveArtifacts artifacts: 'build/**', fingerprint: true
+            fingerprint: true
         }
         failure {
             echo 'Build failed!'
