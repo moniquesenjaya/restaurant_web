@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu - IndoFood</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="bg-dark text-white p-3">
+        <nav class="navbar navbar-expand-lg navbar-dark container">
+            <a class="navbar-brand" href="#">IndoFood</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="aboutDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            About Us
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="aboutDropdown">
+                            <a class="dropdown-item" href="history.html">History</a>
+                            <a class="dropdown-item" href="contact.html">Contact Us</a>
+                            <a class="dropdown-item" href="team.html">Our Team</a>
+                        </div>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
+                    <li class="nav-item"><a class="nav-link" href="cart.html">Cart</a></li>
+                    <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+                    <li class="nav-item"><a class="nav-link" href="register.html">Register</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container mt-5">
+        <input class="form-control mb-4" id="menuSearch" type="text" placeholder="Search for dishes..">
+        
+        <div class="accordion" id="menuAccordion">
+            <div class="card">
+                <div class="card-header" id="headingOne">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            Appetizers
+                        </button>
+                    </h2>
+                </div>
+
+                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#menuAccordion">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="card menu-item" data-toggle="modal" data-target="#menuModal" data-title="Bakwan Jagung" data-description="Deep Fried Corn Fritters." data-price="$10" data-image="bakwan jagung.jpeg">
+                                    <img src="bakwan jagung.jpeg" style="max-height: 170px;" class="card-img-top" alt="Appetizer">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Bakwan Jagung</h5>
+                                        <p class="card-text">Deep Fried Corn Fritters.</p>
+                                        <p class="card-text">$10</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card menu-item" data-toggle="modal" data-target="#menuModal" data-title="Martabak Telor" data-description="Meat and Egg Indonesian Style Savory Pancake with leek, green onions and a side of sauce." data-price="$20" data-image="martabak telor.webp">
+                                    <img src="martabak telor.webp" style="max-height: 170px;"  class="card-img-top" alt="Appetizer 2">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Martabak Telor</h5>
+                                        <p class="card-text">Meat and Egg Indonesian Style Savory...</p>
+                                        <p class="card-text">$20</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card menu-item" data-toggle="modal" data-target="#menuModal" data-title="Appetizer Name 2" data-description="Description 2" data-price="$12" data-image="food.jpg">
+                                    <img src="sate ayam.jpeg"style="max-height: 170px;"  class="card-img-top" alt="Appetizer 2">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Sate Ayam</h5>
+                                        <p class="card-text">Grilled Chicken Satay with peanut sauce.</p>
+                                        <p class="card-text">$18</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card menu-item" data-toggle="modal" data-target="#menuModal" data-title="Appetizer Name 2" data-description="Description 2" data-price="$12" data-image="food.jpg">
+                                    <img src="sate padang.jpeg"style="max-height: 170px;"  class="card-img-top" alt="Appetizer 2">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Sate Padang</h5>
+                                        <p class="card-text">Grilled Beef Skewer with special sauce.</p>
+                                        <p class="card-text">$15</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card menu-item" data-toggle="modal" data-target="#menuModal" data-title="Appetizer Name 2" data-description="Description 2" data-price="$12" data-image="food.jpg">
+                                    <img src="sate lilit.webp"style="max-height: 170px;"  class="card-img-top" alt="Appetizer 2">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Sate Lilit</h5>
+                                        <p class="card-text">Grilled fish skewers.</p>
+                                        <p class="card-text">$14</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card my-2">
+                <div class="card-header" id="headingTwo">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                            Mains
+                        </button>
+                    </h2>
+                </div>
+
+                <div id="collapseTwo" class="collapse show" aria-labelledby="headingTwo" data-parent="#menuAccordion">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="card menu-item" data-toggle="modal" data-target="#menuModal" data-title="Bakso" data-description="Hearty Meatball soup with vermicilli noodles." data-price="$19" data-image="bakso.jpg">
+                                    <img src="bakso.jpeg"style="max-height: 200px;"  class="card-img-top" alt="Main">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Bakso</h5>
+                                        <p class="card-text">Hearty Meatball soup with vermicilli noodles.</p>
+                                        <p class="card-text">$19</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card menu-item" data-toggle="modal" data-target="#menuModal" data-title="Main Name 2" data-description="Description Main 2" data-price="$54" data-image="food.jpg">
+                                    <img src="mie goreng.jpg" style="max-height: 200px;" class="card-img-top" alt="Main 2">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Mie Goreng</h5>
+                                        <p class="card-text">Fried Noodles with a variety of proteins...</p>
+                                        <p class="card-text">$19</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card menu-item" data-toggle="modal" data-target="#menuModal" data-title="Main Name 2" data-description="Description Main 2" data-price="$54" data-image="food.jpg">
+                                    <img src="pempek.jpg" style="max-height: 200px;"  class="card-img-top" alt="Main 2">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Pempek</h5>
+                                        <p class="card-text">Deep Fried Fish Cake with noodles...</p>
+                                        <p class="card-text">$19</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card menu-item" data-toggle="modal" data-target="#menuModal" data-title="Main Name 2" data-description="Description Main 2" data-price="$54" data-image="food.jpg">
+                                    <img src="rawon.jpeg" class="card-img-top" style="max-height: 200px;" alt="Main 2">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Rawon</h5>
+                                        <p class="card-text">Tender Beef that is stewed for over 10 hours.</p>
+                                        <p class="card-text">$19</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card menu-item" data-toggle="modal" data-target="#menuModal" data-title="Main Name 2" data-description="Description Main 2" data-price="$54" data-image="food.jpg">
+                                    <img src="rendang.jpeg" style="max-height: 200px;"  class="card-img-top" alt="Main 2">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Rendang</h5>
+                                        <p class="card-text">Voted Number 1 Dish in the world...</p>
+                                        <p class="card-text">$19</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card menu-item" data-toggle="modal" data-target="#menuModal" data-title="Main Name 2" data-description="Description Main 2" data-price="$54" data-image="food.jpg">
+                                    <img src="tumpeng.jpeg" style="max-height: 200px;" class="card-img-top" alt="Main 2">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Tumpeng</h5>
+                                        <p class="card-text">Giant feast to share for 4 people...</p>
+                                        <p class="card-text">$55</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div class="modal fade" id="menuModal" tabindex="-1" role="dialog" aria-labelledby="menuModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content border-0 shadow-lg">
+                <div class="modal-header text-white bg-dark">
+                    <h5 class="modal-title" id="menuModalLabel">Dish Name</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <img src="" class="img-fluid rounded mb-3" alt="Dish Image" id="modalImage" style="max-height: 300px; object-fit: cover;">
+                    <p id="modalDescription" class="text-muted">Description of the dish.</p>
+                    <p id="modalPrice" class="fw-bold text-dark">Price: $10</p>
+                    <div class="input-group mb-3" style="max-width: 150px; margin: 0 auto;">
+                        <button class="btn btn-outline-dark" type="button" id="button-minus">-</button>
+                        <input type="text" class="form-control text-center" value="1" id="quantity">
+                        <button class="btn btn-outline-dark" type="button" id="button-plus">+</button>
+                    </div>
+                </div>
+                <div class="modal-footer border-0">
+                    <button type="button" class="btn btn-dark w-100" id="addToCartBtn">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-dark text-white text-center p-3">
+        <p>&copy; 2024 Our Restaurant. All rights reserved.</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        // Quantity control
+        document.getElementById('button-minus').addEventListener('click', function() {
+            var quantity = document.getElementById('quantity');
+            if (quantity.value > 1) {
+                quantity.value = parseInt(quantity.value) - 1;
+            }
+        });
+
+        document.getElementById('button-plus').addEventListener('click', function() {
+            var quantity = document.getElementById('quantity');
+            quantity.value = parseInt(quantity.value) + 1;
+        });
+
+        // Modal display
+        $('#menuModal').on('show.bs.modal', function (event) {
+            var button = $(event.relatedTarget);
+            var title = button.data('title');
+            var description = button.data('description');
+            var price = button.data('price');
+            var image = button.data('image');
+            var modal = $(this);
+            modal.find('.modal-title').text(title);
+            modal.find('#modalDescription').text(description);
+            modal.find('#modalPrice').text('Price: ' + price);
+            modal.find('#modalImage').attr('src', image);
+        });
+
+        // Search functionality
+        document.getElementById('menuSearch').addEventListener('keyup', function() {
+            var searchTerm = this.value.toLowerCase();
+            var items = document.querySelectorAll('.menu-item');
+
+            items.forEach(function(item) {
+                var title = item.querySelector('.card-title').textContent.toLowerCase();
+                if (title.includes(searchTerm)) {
+                    item.parentElement.style.display = '';
+                } else {
+                    item.parentElement.style.display = 'none';
+                }
+            });
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+    const addToCartBtn = document.getElementById('addToCartBtn');
+    
+    addToCartBtn.addEventListener('click', function() {
+        const dishName = document.getElementById('menuModalLabel').textContent;
+        const dishPrice = parseFloat(document.getElementById('modalPrice').textContent.replace('Price: $', ''));
+        const dishQuantity = parseInt(document.getElementById('quantity').value);
+        const dishImage = document.getElementById('modalImage').src;
+
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+        const item = {
+            name: dishName,
+            price: dishPrice,
+            quantity: dishQuantity,
+            image: dishImage
+        };
+
+        cart.push(item);
+        localStorage.setItem('cart', JSON.stringify(cart));
+        alert('Item added to cart!');
+    });
+});
+    </script>
+</body>
+</html>

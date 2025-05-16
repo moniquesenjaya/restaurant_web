@@ -1,0 +1,193 @@
+body {
+    font-family: Helvetica, sans-serif;
+    background-color: #f8f9fa;
+}
+
+header {
+    margin-bottom: 20px;
+}
+
+.hero {
+    background: url('restaurant-background.jpg') no-repeat center center;
+    background-blend-mode: multiply;
+    background-color: rgba(22, 22, 22, 0.397);
+    background-size: cover;
+    color: white;
+    padding: 100px 0;
+}
+
+footer {
+    background-color: #343a40;
+    color: white;
+    padding: 20px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+main {
+    padding: 20px;
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+h4 {
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+
+.rounded-circle {
+    border-radius: 50%;
+}
+
+.row + .row {
+    margin-top: 40px;
+}
+
+.col-md-6 img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.col-md-6 h2 {
+    margin-top: 20px;
+}
+
+.col-md-6 p {
+    margin-top: 10px;
+    font-size: 1.1rem;
+}
+
+form {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+form input,
+form textarea,
+form select {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+form button {
+    border: none;
+    padding: 10px 20px;
+    background-color: rgb(0, 123, 255);
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #0056b3;
+}
+
+.navbar-brand {
+    font-weight: bold;
+}
+
+.card {
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.card.menu-item {
+    cursor: pointer;
+    margin-bottom: 1rem;
+}
+
+.modal-body img {
+    width: 100%;
+}
+
+input[type="text"] {
+    border: 1px solid #ccc;
+}
+
+.form-control {
+    border: 1px solid #ccc;
+}
+
+input[type="number"] {
+    width: 50px;
+    text-align: center;
+}
+
+.modal-header .close {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+}
+
+.input-group-prepend, .input-group-append {
+    display: flex;
+    align-items: center;
+}
+
+.input-group {
+    width: 30%;
+    margin: 0 auto;
+}
+
+.modal-content {
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.modal-header {
+    border-bottom: none;
+}
+
+.modal-footer {
+    border-top: none;
+}
+
+.btn-close-white {
+    background-color: white;
+    border-radius: 50%;
+    opacity: 1;
+}
+
+.btn-close-white:hover {
+    background-color: #e9ecef;
+}
+
+.modal-body img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.modal-footer button {
+    border-radius: 50px;
+}
+
+@media (max-width: 768px) {
+    .hero {
+        padding: 50px 0;
+    }
+    
+    .card {
+        margin-bottom: 20px;
+    }
+}

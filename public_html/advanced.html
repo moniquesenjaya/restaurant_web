@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Advanced Programming Techniques</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="bg-dark text-white p-3">
+      <nav class="navbar navbar-expand-lg navbar-dark container">
+        <a class="navbar-brand" href="#">Advanced Programming Techniques</a>
+      </nav>
+    </header>
+
+    <main class="container my-4">
+      <h1>Advanced Programming Techniques</h1>
+
+      <section class="my-4">
+        <h2>Local Storage for Data Persistence</h2>
+        <p>
+          In this project, we use the <strong>localStorage API</strong> to
+          maintain cart data even after the user refreshes the page or navigates
+          away from it. Here's how it's done:
+        </p>
+
+        <h4>Implementation Steps</h4>
+        <ol>
+          <li>
+            When an item is added to the cart, the cart array is updated, and
+            the array is converted into a JSON string:
+            <pre><code>localStorage.setItem('cart', JSON.stringify(cart));</code></pre>
+          </li>
+          <li>
+            When the cart page loads, the stored cart data is retrieved from
+            localStorage and parsed back into an array:
+            <pre><code>const savedCart = JSON.parse(localStorage.getItem('cart')) || [];</code></pre>
+          </li>
+          <li>
+            The application restores the cart’s state, displaying the items and
+            their quantities:
+            <pre><code>// Example function to render the cart
+function renderCart() {
+    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+    cart.forEach(item => {
+        // Update UI with item data
+    });
+}</code></pre>
+          </li>
+        </ol>
+
+        <h4>How it Works</h4>
+        <p>
+          This method allows the application to maintain the cart's state across
+          page refreshes or when the user navigates to other pages. The data is
+          stored in the browser’s local storage, which persists even after the
+          session ends.
+        </p>
+      </section>
+
+      <section class="my-4">
+        <h2>jQuery for Modal Content Update</h2>
+        <p>
+          The <strong>jQuery</strong> library is used to listen for button
+          clicks on the menu page and dynamically update the content of a modal.
+          The modal shows details of the dish when the respective card is
+          clicked.
+        </p>
+
+        <h4>Implementation Steps</h4>
+        <ol>
+          <li>
+            Add a button to trigger the modal:
+            <pre><code>&lt;button class="btn btn-info" data-bs-toggle="modal" data-bs-target="#dishModal" data-title="Dish Name" data-description="Delicious dish details here"&gt;More Info&lt;/button&gt;</code></pre>
+          </li>
+          <li>
+            Use jQuery to listen for the modal's `show.bs.modal` event and
+            dynamically update its content:
+            <pre><code>$('#dishModal').on('show.bs.modal', function (event) {
+    var button = $(event.relatedTarget); // Button that triggered the modal
+    var title = button.data('title');
+    var description = button.data('description');
+    
+    var modal = $(this);
+    modal.find('.modal-title').text(title);
+    modal.find('.modal-body p').text(description);
+});</code></pre>
+          </li>
+        </ol>
+
+        <h4>How it Works</h4>
+        <p>
+          When a user clicks a button, the relevant data (like the dish title
+          and description) is passed to the modal via `data-*` attributes.
+          jQuery listens for the click and updates the modal's content
+          dynamically without needing to reload the page.
+        </p>
+      </section>
+
+      <section class="my-4">
+        <h2>Summary</h2>
+        <p>
+          Both features help enhance the user experience by improving data
+          persistence and enabling dynamic content display without refreshing
+          the page. These techniques are common in modern web development and
+          ensure a more seamless interaction for the user.
+        </p>
+      </section>
+
+      <a href="index.html">Back to Home</a>
+    </main>
+
+    <footer class="bg-dark text-white text-center p-3">
+      <p>&copy; 2024 IndoFood. All rights reserved.</p>
+    </footer>
+
+    <!-- Modal HTML -->
+    <div
+      class="modal fade"
+      id="dishModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Dish Details</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <p>Dish description will be shown here.</p>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  </body>
+</html>
