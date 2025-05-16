@@ -9,9 +9,6 @@ pipeline {
         BUILD_VERSION = "${env.BUILD_NUMBER}"
     }
 
-    triggers {
-        pollSCM('* * * * *') // Poll Git every minute for changes
-    }
 
     stages {
         stage('Checkout') {
@@ -35,7 +32,7 @@ pipeline {
             archiveArtifacts artifacts: 'build/**', fingerprint: true
         }
         failure {
-            echo '❌ Build failed!'
+            echo 'Build failed!'
         }
     }
 }
