@@ -10,13 +10,18 @@ pipeline {
     }
 
     triggers {
-        pollSCM('H/5 * * * *')
+        pollSCM('H/5 * * * *') {
+            ignorePostCommitHooks()
+            branches {
+                branch('origin/main')
+            }
+    }
     }
 
     stages {
         stage('Checkout') {
             steps {
-                git 'https://github.com/moniquesenjaya/restaurant_web.git'
+                git branch: 'main', url: 'https://github.com/moniquesenjaya/restaurant_web.git'
             }
         }
 
@@ -38,7 +43,7 @@ pipeline {
 
     post {
         success {
-            fingerprint: true
+            archiveArtifacts artifacts: 'build/**', fingerprint: true
         }
         failure {
             echo 'Build failed!'
