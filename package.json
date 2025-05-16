@@ -4,10 +4,9 @@
   "description": "Starter express web server template",
   "main": "index.js",
   "scripts": {
-  "start": "node .",
-  "build": "echo 'No build step defined. Running start script instead.' && npm run start",
-  "test": "echo \"Error: no test specified\" && exit 1"
-},
+    "start": "node .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
   "keywords": [
     "node",
     "web",
@@ -20,9 +19,5 @@
   "dependencies": {
     "express": "^4.18.3",
     "sqlite3": "^5.1.7"
-  },
-  "devDependencies": {
-    "jest": "^29.7.0",
-    "puppeteer": "^24.8.2"
   }
 }

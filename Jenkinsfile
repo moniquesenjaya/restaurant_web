@@ -32,19 +32,5 @@ pipeline {
             }
         }
 
-        stage('Test') {
-            steps {
-                bat 'echo Testing version %BUILD_VERSION%'
-            }
-        }
-    }
-
-    post {
-        success {
-            archiveArtifacts artifacts: 'build/**', fingerprint: true
-        }
-        failure {
-            echo 'Build failed!'
-        }
     }
 }
