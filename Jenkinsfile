@@ -28,6 +28,12 @@ pipeline {
             }
         }
 
+        stage('Test') {
+            steps {
+                bat 'echo Testing version %BUILD_VERSION%'
+            }
+        }
+
     }
 
     post {
