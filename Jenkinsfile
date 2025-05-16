@@ -9,6 +9,9 @@ pipeline {
         BUILD_VERSION = "${env.BUILD_NUMBER}"
     }
 
+    triggers {
+        pollSCM('H/5 * * * *')
+    }
 
     stages {
         stage('Checkout') {
