@@ -10,12 +10,11 @@ pipeline {
     }
 
     triggers {
-        pollSCM('H/5 * * * *') {
-            ignorePostCommitHooks()
-            branches {
-                branch('origin/main')
-            }
+        pollSCM('H/5 * * * *')
     }
+
+    options {
+        skipDefaultCheckout()
     }
 
     stages {
@@ -38,7 +37,6 @@ pipeline {
                 bat 'echo Testing version %BUILD_VERSION%'
             }
         }
-
     }
 
     post {
